@@ -19,7 +19,6 @@ Vagrant DynamoDB local With DynamoDB-Admin
 - [使い方](#使い方)
   - [実行](#実行)
   - [設定ファイルの変更](#設定ファイルの変更)
-  - [dynamodb-adminを開く](#dynamodb-adminを開く)
 - [バージョニング](#バージョニング)
 - [ライセンス & 作者](#ライセンス--作者)
 </details>
@@ -43,20 +42,29 @@ Vagrant DynamoDB local With DynamoDB-Admin
 使い方
 -----
 ### 実行
+ポートフォワーディングするなら下記コマンドを実行する。
 ```pwsh
-vagrant up
+vagrant up forward-port
 ```
+- dynamodb-local
+  - `http://localhost:50000`
+- dynamodb-admin
+  - `http://localhost:50001`
+
+固定IPにするなら下記コマンドを実行する。
+```pwsh
+vagrant up private-net
+```
+- dynamodb-local
+  - `http://192.168.33.11:8000`
+- dynamodb-admin
+  - `http://192.168.33.11:8001`
 
 ### 設定ファイルの変更
 下記のenvファイルから環境変数を変更できる
 - [バージョン等の設定](./docker/.env)
 - [dynamodb-localの設定](./docker/.env.dynamodb-local)
 - [dynamodb-adminの設定](./docker/.env.dynamodb-admin)
-
-### dynamodb-adminを開く
-```
-http://192.168.33.11:8001
-```
 
 
 バージョニング

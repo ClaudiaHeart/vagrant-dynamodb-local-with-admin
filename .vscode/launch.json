@@ -7,7 +7,13 @@
     {
       "type": "chrome",
       "request": "launch",
-      "name": "Launch DynamoDB Admin",
+      "name": "ForwardPort DynamoDB Admin",
+      "url": "http://localhost:50001"
+    },
+    {
+      "type": "chrome",
+      "request": "launch",
+      "name": "PrivateNet DynamoDB Admin",
       "url": "http://192.168.33.11:8001"
     }
   ]
