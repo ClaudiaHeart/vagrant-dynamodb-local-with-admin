@@ -1,0 +1,12 @@
+{
+	"folders": [
+    {
+      "name": "vagrant-dynamodb-local-with-admin",
+      "path": "."
+    },
+    {
+      "name": "docker [Shortcut]",
+      "path": "./docker"
+    }
+  ]
+}
