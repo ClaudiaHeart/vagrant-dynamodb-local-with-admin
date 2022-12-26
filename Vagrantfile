@@ -7,7 +7,9 @@ install_plugin('vagrant-vbguest')
 install_plugin('vagrant-cachier')
 install_plugin('vagrant-timezone')
 install_plugin('vagrant-docker-compose')
+install_plugin('dotenv')
 
+Dotenv.load
 # -*- mode: ruby -*-
 # vi: set ft=ruby :
 
@@ -24,6 +26,8 @@ Vagrant.configure("2") do |config|
   # boxes at https://vagrantcloud.com/search.
   config.vm.box = "ubuntu/jammy64"
   config.vm.box_version = "20221219.0.0"
+  # config.vm.boot_timeout = 600
+  config.vm.boot_timeout = ENV['VM_BOOT_TIMEOUT'].to_i
 
   config.timezone.value = "Asia/Tokyo"
   config.cache.scope = :box
@@ -83,8 +87,8 @@ Vagrant.configure("2") do |config|
     # vb.gui = true
 
     # Customize the amount of memory on the VM:
-    # vb.memory = "1024"
-    vb.memory = "2048"
+    vb.cpus = ENV['VIRTUALBOX_CPUS']
+    vb.memory = ENV['VIRTUALBOX_MEMORY']
   end
   #
   # View the documentation for the provider you are using for more
