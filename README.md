@@ -27,8 +27,8 @@ Vagrant DynamoDB local With DynamoDB-Admin
 作業環境
 ------------
 - Windows 10 64bit
-- VirtualBox 6.1.38
-- Vagrant 2.3.1
+- VirtualBox 7.0.4
+- Vagrant 2.3.4
 
 
 ツールのバージョン
