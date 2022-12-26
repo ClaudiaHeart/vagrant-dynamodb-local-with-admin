@@ -33,7 +33,7 @@ Vagrant DynamoDB local With DynamoDB-Admin
 
 ツールのバージョン
 ------------
-- ubuntu/jammy64 20221014.0.0
+- ubuntu/jammy64 20221219.0.0
 - docker-compose 3.7
 - [amazon/dynamodb-local](https://hub.docker.com/r/amazon/dynamodb-local) 1.20.0
 - [aaronshaf/dynamodb-admin](https://hub.docker.com/r/aaronshaf/dynamodb-admin/) 4.4.1

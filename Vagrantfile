@@ -23,7 +23,7 @@ Vagrant.configure("2") do |config|
   # Every Vagrant development environment requires a box. You can search for
   # boxes at https://vagrantcloud.com/search.
   config.vm.box = "ubuntu/jammy64"
-  config.vm.box_version = "20221014.0.0"
+  config.vm.box_version = "20221219.0.0"
 
   config.timezone.value = "Asia/Tokyo"
   config.cache.scope = :box
