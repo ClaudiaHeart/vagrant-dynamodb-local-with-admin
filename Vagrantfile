@@ -9,7 +9,7 @@ install_plugin('vagrant-timezone')
 install_plugin('vagrant-docker-compose')
 install_plugin('dotenv')
 
-Dotenv.load
+Dotenv.load('.env.local', '.env')
 # -*- mode: ruby -*-
 # vi: set ft=ruby :
 
@@ -26,7 +26,6 @@ Vagrant.configure("2") do |config|
   # boxes at https://vagrantcloud.com/search.
   config.vm.box = "ubuntu/jammy64"
   config.vm.box_version = "20221219.0.0"
-  # config.vm.boot_timeout = 600
   config.vm.boot_timeout = ENV['VM_BOOT_TIMEOUT'].to_i
 
   config.timezone.value = "Asia/Tokyo"
